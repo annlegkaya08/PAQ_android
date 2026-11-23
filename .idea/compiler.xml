@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="PAQ_android.app" target="25" />
+      <module name="PAQ_android.core.billing" target="25" />
+      <module name="PAQ_android.core.data" target="25" />
+      <module name="PAQ_android.core.notifications" target="25" />
+      <module name="PAQ_android.core.ui" target="25" />
+      <module name="PAQ_android.feature.calendar" target="25" />
+      <module name="PAQ_android.feature.habits" target="25" />
+      <module name="PAQ_android.feature.home" target="25" />
+      <module name="PAQ_android.feature.onboarding" target="25" />
+      <module name="PAQ_android.feature.plus" target="25" />
+      <module name="PAQ_android.feature.projects" target="25" />
+      <module name="PAQ_android.feature.settings" target="25" />
+      <module name="PAQ_android.feature.tasks" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>
