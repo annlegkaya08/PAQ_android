@@ -1,6 +1,6 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
-    id("java-library")
-    alias(libs.plugins.jetbrains.kotlin.jvm)
+    alias(libs.plugins.kotlin.jvm)
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_11
@@ -8,6 +8,18 @@ java {
 }
 kotlin {
     compilerOptions {
-        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
+        jvmTarget.set(JvmTarget.JVM_11)
     }
+}
+dependencies {
+    api(libs.coroutines.core)
+    implementation(libs.javax.inject)
+
+    testImplementation(kotlin("test"))
+    testImplementation(libs.junit)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.turbine)
+}
+tasks.withType<Test> {
+    useJUnit()
 }

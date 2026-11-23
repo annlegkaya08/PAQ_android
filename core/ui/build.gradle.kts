@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
@@ -9,22 +10,25 @@ android {
     }
 
     defaultConfig {
-        minSdk = 24
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        minSdk = 26
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.junit)
+    api(project(":core:domain"))
+    api(platform(libs.compose.bom))
+    api(libs.compose.ui)
+    api(libs.compose.ui.graphics)
+    api(libs.compose.material3)
+    api(libs.compose.material.icons.core)
+    api(libs.compose.ui.tooling.preview)
+    debugImplementation(libs.compose.ui.tooling)
 }
