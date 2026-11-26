@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="11">
+      <module name="paq.core.domain.model" target="25" />
       <module name="PAQ_android.app" target="25" />
       <module name="PAQ_android.core.billing" target="25" />
       <module name="PAQ_android.core.data" target="25" />
